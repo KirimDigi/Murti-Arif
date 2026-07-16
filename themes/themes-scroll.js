@@ -436,11 +436,7 @@ var initMusic = function initMusic() {
     });
   }
 
-  // Coba autoplay dengan muted saat halaman dimuat
-  document.addEventListener("DOMContentLoaded", function () {
-    // Mulai dengan muted autoplay
-    playMusic(true);
-  });
+
 
   // Catat interaksi pengguna pertama dengan halaman
   var _markUserInteraction = function markUserInteraction() {

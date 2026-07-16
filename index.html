@@ -197,7 +197,7 @@
         <!-- Loader -->
         <div id="loader" class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>
         <!-- music -->
-        <audio id="music" loop autoplay>
+        <audio id="music" loop>
             <source src="./Brisia%20Jodie,%20Fabio%20Asher%20-%20Aku%20Memilihmu%20Official%20Music%20Video.mp3">
         </audio>
         <!-- end music -->
@@ -1249,14 +1249,14 @@
             // 1. Cari dari query parameter (?to=Nama atau ?g=Nama)
             const urlParams = new URLSearchParams(window.location.search);
             let toParam = urlParams.get('to') || urlParams.get('g');
-            
+
             // 2. Jika tidak ketemu, cari dari hash parameter (#to=Nama atau #g=Nama)
             if (!toParam && window.location.hash) {
                 const hashStr = window.location.hash.substring(1);
                 const hashParams = new URLSearchParams(hashStr);
                 toParam = hashParams.get('to') || hashParams.get('g');
             }
-            
+
             return toParam ? decodeURIComponent(toParam) : null;
         }
 
